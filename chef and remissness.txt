@@ -1,0 +1,21 @@
+#include<bits/stdc++.h> 
+#include<string>
+#include<vector>
+  
+int main() 
+{
+using namespace std; 
+    long long int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int n,min,max;
+        pair<long long int,long long int> p;
+        cin>>p.first>>p.second;
+        if(p.first>p.second)
+        min=p.first;
+        else min=p.second;
+        max=p.first+p.second;
+        cout<<min<<" "<<max<<endl;
+    }
+}  

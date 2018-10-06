@@ -13,7 +13,7 @@ using namespace std;
             sum=0;
             for(int i=1; i<=p.second; i++)
             {
-                sum=sum+i;
+                sum+=i;
             }
             p.second=sum;
         }

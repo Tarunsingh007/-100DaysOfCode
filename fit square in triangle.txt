@@ -1,0 +1,19 @@
+#include<bits/stdc++.h> 
+using namespace std; 
+  
+int square(int b) 
+{ 
+    return (b / 2 - 1) * (b / 2) / 2; 
+} 
+  
+int main() 
+{ 
+    int b,n;
+    cin>>n;
+    while(n--)
+    {
+    cin>>b;
+    cout<<square(b)<<endl;
+    } 
+    return 0; 
+}  

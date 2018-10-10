@@ -1,0 +1,24 @@
+#include<bits/stdc++.h> 
+#include<math.h>
+#include<vector>
+using namespace std; 
+  
+int main() 
+{
+    int t;
+    cin>>t;
+    int n,e=0,o=0;
+    while(t--)
+    {
+        cin>>n;
+            if(n%2==0)
+                e++;
+            else
+                o++;
+
+    }
+    if(e>o)
+    cout<<"READY FOR BATTLE"<<endl;
+    else
+    cout<<"NOT READY"<<endl;
+}  

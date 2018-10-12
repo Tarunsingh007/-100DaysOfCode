@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int ch,co,k;
+        cin>>ch>>co>>k;
+        int ttl=0;
+        ttl=ch+co;
+        int matches=ttl/k;
+        if(matches%2==0)
+        cout<<"CHEF"<<endl;
+        else
+        cout<<"COOK"<<endl;
+    }
+}

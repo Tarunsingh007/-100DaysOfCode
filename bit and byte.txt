@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+#include<algorithm>
+#include<math.h>
+#define ll long long int
+#define ld long double
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t;
+    cin>>t;
+    while(t--)
+    {
+      ll n;
+      cin>>n;
+      n--;
+      ll bit=0,nibble=0,byte=0,diff=0;
+      diff=(int)(n/26);
+      bit=pow(2,diff);
+      n=n-diff*26;
+      if(n>=2)
+      {
+          n=n-2;
+          nibble=bit;
+          bit=0;
+      }
+      if(n>=8)
+      {
+          n=n-8;
+          byte=nibble;
+          nibble=0;
+      }
+      cout<<bit<< " "<< nibble<< " "<< byte<<endl;
+    }
+}

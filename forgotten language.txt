@@ -1,0 +1,49 @@
+#include <iostream>
+#include<vector>
+#include<map>
+#include<string>
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,m,c=0;
+        cin>>n>>m;
+        vector<string> v,vc;
+        for(int i=0; i<n; i++)
+        {
+            string s; cin>>s; v.push_back(s);
+        }
+        while(m--)
+        {
+            int nm;
+            cin>>nm;
+            for(int i=0;i<nm;i++)
+            {
+                string s;cin>>s;
+                vc.push_back(s);
+            }
+            for(int i=0;i<v.size();i++)
+            {
+                for(int j=0; j<vc.size(); j++)
+                {
+                    if(v[i].compare(vc[j])==0)
+                    {
+                        v[i]="YES";
+                    }
+                }
+            }
+        }
+        for(int i=0; i<v.size();i++)
+        {
+            if(v[i]!="YES")
+            v[i]="NO";
+            cout<<v[i]<<" ";
+        }cout<<endl;
+    }
+}

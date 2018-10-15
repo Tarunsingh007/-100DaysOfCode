@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+#include<algorithm>
+#include<map>
+#include<math.h>
+#include<cstring>
+#define ll long long int
+#define ld long double
+#define F first
+#define S second
+#define pb push_back
+using namespace std;
+
+ll fact(ll n)
+{
+    if(n==1||n==0)
+    return 1;
+    else
+    return n*fact(n-1);
+}
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        ll n;
+        cin>>n;
+        ll ans=fact(n);
+        cout<<ans<<endl;
+    }
+}

@@ -1,0 +1,22 @@
+#include<bits/stdc++.h> 
+#include<math.h>
+#include<vector>
+using namespace std; 
+  
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int n,l,f;
+        cin>>n;
+        l=n%10;
+        while(n!=0)
+        {
+            f=n%10;
+            n=n/10;
+        }
+        cout<<l+f<<endl;
+    }
+}  

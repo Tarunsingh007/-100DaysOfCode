@@ -1,0 +1,52 @@
+#include<bits/stdc++.h> 
+#include<string>
+#include<vector>
+#include<sstream>
+#include<math.h>
+#include<map>
+using namespace std; 
+
+int main() 
+{
+    long long int t;
+    cin>>t;
+    while(t--)
+    {
+        
+        string s;
+        cin>>s;
+        map<char,int> m;
+        vector<int> p;
+        for(int i=0; i<s.length(); i++)
+        {
+            m[s[i]]++;
+        }
+        if(s.length()<3)
+        {
+            cout<<"Dynamic"<<endl;
+            continue;
+        }
+        
+        map<char,int>::iterator it=m.begin();
+        while(it!=m.end())
+        {
+            p.push_back(it->second);
+            it++;
+        }
+         int flag=1;
+      for(int i = 2;i<p.size();i++)
+      {
+        if(p[i]!= p[i-1] + p[i-2])
+        {
+            flag = 0;
+            break;
+        }    
+      }
+        if(flag)
+        cout<<"Dynamic"<<endl;
+        else
+        cout<<"Not"<<endl;
+
+    }
+    return 0;
+}  

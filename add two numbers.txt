@@ -1,0 +1,16 @@
+#include<bits/stdc++.h> 
+using namespace std; 
+  
+int main() 
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        pair<int , int> p; long long sum=0;
+        cin>>p.first>>p.second;
+        sum=p.first+p.second;
+        cout<<sum<<endl;
+    }
+    return 0;
+}  

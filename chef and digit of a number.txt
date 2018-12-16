@@ -1,0 +1,41 @@
+#include<bits/stdc++.h>
+#include<algorithm>
+#include<map>
+#include<math.h>
+#include<cstring>
+#define ll long long int
+#define ld long double
+#define F first
+#define S second
+#define pb push_back
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ld t;
+    cin>>t;
+    while(t--)
+    {
+        ll n,z=0,o=0,c=0;
+        cin>>n;
+        for(int i=n; i>0; i=i/10)
+        {
+            c++;
+            ll r=i%10;
+            if(r==0)
+            z++;
+            else
+            o++;
+        }
+        if((z+o)==c)
+        {
+            if(o==1||z==1)
+            cout<<"Yes";
+            else
+            cout<<"No";
+        }
+        cout<<endl;
+    }
+}

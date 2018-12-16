@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+#include<algorithm>
+#include<map>
+#include<math.h>
+#include<cstring>
+#define ll long long int
+#define ld long double
+#define pb push_back
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ll t;
+    cin>>t;
+    while(t--)
+    {
+        int n,s=0;
+        cin>>n;
+        map<ll,ll>m;
+        for(int i=0;i<n;i++)
+        {
+            int l;cin>>l;
+            m[l]++;
+        }
+        map<ll,ll>::iterator it=m.begin();
+        for(it; it!=m.end(); it++)
+        {
+            if(it->second%2!=0)
+            s=s+it->first;
+        }
+        cout<<s<<endl;
+    }
+}

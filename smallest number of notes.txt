@@ -1,0 +1,25 @@
+#include<bits/stdc++.h> 
+int main() 
+{
+using namespace std; 
+    long long int t;
+    cin>>t;
+    while(t--)
+    {
+        long long int n,r,n1,n2,n3,n4,n5,n6;
+        cin>>n;
+        n1=n/100;
+        n=n%100;
+        n6=n/50;
+        n=n%50;
+        n2=n/10;
+        n=n%10;
+        n3=n/5;
+        n=n%5;
+        n4=n/2;
+        n=n%2;
+        n5=n/1;
+        cout<<n1+n2+n3+n4+n5+n6<<endl;
+        
+    }
+}  

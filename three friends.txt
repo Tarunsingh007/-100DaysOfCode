@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+#define ll long long int
+#define loop for(ll i=0;i<n;i++)
+using namespace std;
+ll gcd(ll a,ll b)
+{
+    if (a == 0)
+        return b;
+    return gcd(b%a, a);
+}
+int main(){
+    int t;cin>>t;
+    while(t--)
+    {
+        ll x,y,z;bool ans=false;
+        cin>>x>>y>>z;
+        if(x+y+z==0)
+        ans=true;
+        else if(x+y-z==0)
+        ans=true;
+        else if(x-y-z==0)
+        ans=true;
+        else if(-x-y-z==0)
+        ans=true;
+        else if(x-y+z==0)
+        ans=true;
+        else if(-x+y+z==0)
+        ans=true;
+        else if(-x-y+z==0)
+        ans=true;
+        else if(-x+y-z==0)
+        ans=true;
+        if(ans)
+        cout<<"yes";
+        else
+        cout<<"no";
+        cout<<endl;
+    }
+}
+

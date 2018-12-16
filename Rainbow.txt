@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+string cll(int a[],int N)
+{
+	int x=1,f=0;
+	for(int i=0,j=N-1;i<=j;i++,j--)
+	{
+		if(a[i]!=a[j] || a[i]!=x)
+		{
+			f=1;
+			break;
+		}
+		if(a[i]<a[i+1] && x<7)
+		{
+			x++;
+		}
+	}
+	if(f==1 || x!=7)
+	{
+		return "no";
+	}else
+	{
+		return "yes";
+	}
+}
+int main()
+{
+	int t;
+	cin>>t;
+	while(t--)
+	{
+		int n;cin>>n;int a[n];
+		for(int i=0;i<n;i++)
+		{
+			cin>>a[i];
+		}
+		cout<<cll(a,n)<<endl;
+	}
+}

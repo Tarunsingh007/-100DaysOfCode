@@ -1,0 +1,55 @@
+#include<bits/stdc++.h>
+#include <algorithm>
+#include <cstring>
+#define ll long long int
+#define pb push_back
+using namespace std;
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        ll n,t=0,ans=0,tm;cin>>n;vector<string>v(n);bool prsnt=false;
+        for(int i=0; i<n; i++)
+        {
+            prsnt=false;
+            tm=2;
+            string str;cin>>str;
+            for(int j=1; j<str.length(); j++)
+            {
+                if((str[j-1]=='d'||str[j-1]=='f')&& (str[j]=='j'||str[j]=='k'))
+                {
+                    t=2;
+                }
+                if((str[j-1]=='j'||str[j-1]=='k')&& (str[j]=='f'||str[j]=='d'))
+                {
+                    t=2;
+                }
+                if((str[j-1]=='d'||str[j-1]=='f')&& (str[j]=='d'||str[j]=='f'))
+                {
+                    t=4;
+                }
+                if((str[j-1]=='j'||str[j-1]=='k')&& (str[j]=='j'||str[j]=='k'))
+                {
+                    t=4;
+                }
+                tm=tm+t;
+            }
+            for(int j=0; j<v.size(); j++)
+            {
+                if(str==v[j])
+                   { prsnt=true; break;}
+            }
+            v.pb(str);
+            if(prsnt)
+                tm=tm/2;
+            ans=ans+tm;
+        }
+        cout<<ans<<endl;
+    }
+    
+}
